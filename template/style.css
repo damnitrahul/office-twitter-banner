@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/Sora-SemiBold.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  background-color: #1c1c28;
+  color: #ebebeb;
+  font-family: Sora;
+}
+.header {
+  height: 500px;
+  width: 1500px;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+h2 {
+  margin: 0;
+  max-width: 75%;
+  font-size: 2.75rem;
+}
+p {
+  font-size: 2.5rem;
+  color: #01cc99;
+  text-align: right;
+  max-width: 65%;
+}
+.quote {
+  padding-bottom: 4rem;
+}
+img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(8px -8px 0px #ff6767) drop-shadow(9px -9px 0px #50cb93);
+}

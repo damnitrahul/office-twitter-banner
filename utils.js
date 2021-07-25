@@ -29,12 +29,14 @@ function random(min, max) {
   return Math.floor(min + Math.random() * (max - min));
 }
 
-async function generateImage(html) {
+async function generateImage(htmlPath) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   page.setViewport({ width: 1500, height: 500 });
   await page.evaluateHandle("document.fonts.ready");
-  await page.setContent(html);
+  await page.goto(htmlPath, {
+    waitUntil: `networkidle0`,
+  });
   await page.screenshot({ path: "out.png" });
   await browser.close();
 }
