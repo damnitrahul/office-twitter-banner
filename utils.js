@@ -16,6 +16,7 @@ async function updateProfileBanner(data) {
     await twitterClient.accountsAndUsers.accountUpdateProfileBanner({
       banner: data,
     });
+    console.log(JSON.stringify(res, null, 2));
   } catch (err) {
     console.log(err);
   }
